@@ -1,0 +1,163 @@
+$colorValue: red;
+.typography {
+  color: $colorValue;
+  padding-left: 20px;
+}
+@mixin fontMix($fontValue) {
+  font-size: $fontValue;
+  padding-left: 20px;
+}
+.open1 {
+  @include fontMix(30px);
+}
+.open2 {
+  @include fontMix(25px);
+}
+.open3 {
+  @include fontMix(20px);
+}
+.open4 {
+  @include fontMix(15px);
+}
+.raleway1 {
+  @include fontMix(30px);
+}
+.raleway2 {
+  @include fontMix(25px);
+}
+.raleway3 {
+  @include fontMix(15px);
+}
+.colors {
+  color: $colorValue;
+  padding-left: 20px;
+}
+.flex1 {
+  height: 50px;
+  width: 290px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@mixin roundMix($roundValue) {
+  width: 40px;
+  height: 40px;
+  border: solid;
+  border-radius: 50%;
+  border-width: 1px;
+  background-color: $roundValue;
+}
+.round1 {
+  @include roundMix(black);
+}
+.round2 {
+  @include roundMix(red);
+}
+.round3 {
+  @include roundMix(grey);
+}
+.round4 {
+  @include roundMix(rgb(49, 48, 48));
+}
+.round5 {
+  @include roundMix(black);
+}
+.icons {
+  color: $colorValue;
+  padding-left: 20px;
+}
+.flex2 {
+  height: 50px;
+  width: 200px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+%mediaStyles {
+  width: 40px;
+  height: 40px;
+}
+.bulb {
+  @extend %mediaStyles;
+}
+.pad {
+  @extend %mediaStyles;
+}
+.thunder {
+  @extend %mediaStyles;
+}
+.social {
+  padding-left: 20px;
+  width: 400px;
+  height: 50px;
+  position: relative;
+  top: 20px;
+}
+.social1 {
+  width: 400px;
+  height: 50px;
+}
+.buttons {
+  color: $colorValue;
+  padding-left: 20px;
+  position: relative;
+  top: 40px;
+}
+%borderStyle {
+  width: 740px;
+  height: 120px;
+  background-color: rgb(67, 63, 63);
+  position: relative;
+  top: 50px;
+  left: 20px;
+}
+.border1 {
+  @extend %borderStyle;
+}
+.download {
+  width: 125px;
+  height: 40px;
+  position: relative;
+  background-color: rgb(67, 63, 63);
+  border: solid;
+  border-width: 1px;
+  border-color: white;
+  position: absolute;
+  top: 35px;
+  left: 70px;
+}
+.download1 {
+  color: white;
+  position: absolute;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+}
+.elements {
+  color: $colorValue;
+  padding-left: 20px;
+  position: relative;
+  top: 60px;
+}
+.elements1 {
+  @extend %borderStyle;
+}
+@mixin lineMix($colorLine, $topLine, $leftLine) {
+  width: 60px;
+  border: solid;
+  border-width: 1px;
+  border-color: $colorLine;
+  position: absolute;
+  top: $topLine;
+  left: $leftLine;
+}
+.line1 {
+  @include lineMix(white, 30px, 60px);
+}
+.line2 {
+  @include lineMix(red, 60px, 60px);
+}
